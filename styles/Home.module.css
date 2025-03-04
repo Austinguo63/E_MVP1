@@ -1,0 +1,77 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 1600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 20px 0;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.editorContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background-color: var(--light-gray);
+  border-top: 1px solid var(--medium-gray);
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+}
+
+.citation {
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+  font-style: italic;
+  margin-top: 5px;
+  padding-left: 20px;
+  border-left: 3px solid var(--medium-gray);
+}
+
+@media (min-width: 1024px) {
+  .main {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .editorContainer {
+    width: 70%;
+  }
+}
